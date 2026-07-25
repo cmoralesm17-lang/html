@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 14 - Enlaces HTML</title>
+    <style>
+        .enlaces-personalizados a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .enlaces-personalizados a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        .enlaces-personalizados a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .enlaces-personalizados a:active {
+            color: orange;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .boton-enlace a:link, .boton-enlace a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .boton-enlace a:hover, .boton-enlace a:active {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enlace basico</h2>
+    <a href="https://www.w3schools.com/">Visita W3Schools.com!</a>
+
+    <h2>Atributo target</h2>
+    <p>Este enlace abre en una pestaña nueva:</p>
+    <a href="https://www.w3schools.com/" target="_blank">Visita W3Schools (nueva pestaña)</a>
+
+    <h2>URLs absolutas</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>URLs relativas (a otros archivos de este mismo repo)</h2>
+    <p><a href="15-imagenes.html">Leccion de Imagenes</a></p>
+    <p><a href="01-introduccion.html">Volver a Introduccion</a></p>
+
+    <h2>Imagen como enlace</h2>
+    <a href="01-introduccion.html">
+    <img src="https://via.placeholder.com/80" alt="Ir a introduccion" style="width:80px;height:80px;">
+    </a>
+
+    <h2>Enlace a correo electronico</h2>
+    <a href="mailto:lestermiranda645@gmail.com">Enviar correo</a>
+
+    <h2>Boton como enlace (usando JavaScript)</h2>
+    <button onclick="document.location='01-introduccion.html'">Ir a Introduccion</button>
+
+    <h2>Titulo en el enlace (tooltip)</h2>
+    <a href="https://www.w3schools.com/html/" title="Ir a la seccion de HTML de W3Schools">Visita nuestro Tutorial de HTML</a>
+
+    <h2>Colores personalizados de enlace (estados con CSS)</h2>
+    <p class="enlaces-personalizados">
+        <a href="https://www.w3schools.com/">Pasa el mouse encima de este enlace para ver el efecto hover</a>
+    </p>
+    <p>Verde sin visitar, rosado si ya lo visitaste, rojo al pasar el mouse, naranja al hacer clic.</p>
+
+    <h2>Enlace con estilo de boton</h2>
+    <p class="boton-enlace">
+        <a href="https://www.w3schools.com/">Este es un enlace</a>
+    </p>
+
+    <h2>Marcadores (bookmarks) dentro de la misma pagina</h2>
+    <p><a href="#capitulo4">Saltar al Capitulo 4</a></p>
+
+    <p>(Contenido de relleno para que el salto se note...)</p>
+    <p style="height:400px;">Espacio de relleno para simular una pagina larga.</p>
+
+    <h2 id="capitulo4">Capitulo 4</h2>
+    <p>Aqui llega el enlace de arriba cuando le das clic, gracias al atributo id="capitulo4" en este encabezado.</p>
+
+</body>
+</html>
