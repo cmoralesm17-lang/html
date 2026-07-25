@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 21 - Clases HTML</title>
+    <style>
+        .ciudad {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .nota {
+            font-size: 120%;
+            color: red;
+        }
+
+        .principal {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 21 - Clases HTML</h1>
+
+    <h2>1. Varios divs con la misma clase</h2>
+    <div class="ciudad">
+        <h3>Londres</h3>
+        <p>Londres es la capital de Inglaterra.</p>
+    </div>
+    <div class="ciudad">
+        <h3>Paris</h3>
+        <p>Paris es la capital de Francia.</p>
+    </div>
+    <div class="ciudad">
+        <h3>Tokio</h3>
+        <p>Tokio es la capital de Japon.</p>
+    </div>
+
+    <h2>2. Clase aplicada dentro de una linea de texto (span)</h2>
+    <h3>Mi Encabezado <span class="nota">Importante</span></h3>
+    <p>Este es un texto <span class="nota">importante</span> dentro del parrafo.</p>
+
+    <h2>3. Sintaxis basica: clase en varios h2</h2>
+    <h3 class="ciudad">Londres</h3>
+    <p>Londres es la capital de Inglaterra.</p>
+
+    <h3 class="ciudad">Paris</h3>
+    <p>Paris es la capital de Francia.</p>
+
+    <h2>4. Multiples clases en un mismo elemento</h2>
+    <h3 class="ciudad principal">Londres (ciudad + principal)</h3>
+    <h3 class="ciudad">Paris (solo ciudad)</h3>
+    <h3 class="ciudad">Tokio (solo ciudad)</h3>
+
+    <h2>5. Elementos distintos compartiendo la misma clase</h2>
+    <h3 class="nota">Paris</h3>
+    <p class="nota">Paris es la capital de Francia, y este parrafo comparte la clase "nota" con el encabezado de arriba.</p>
+
+    <h2>6. Uso de class con JavaScript</h2>
+    <p>Al hacer clic en el boton, se ocultan todos los elementos con clase "ciudad":</p>
+    <button onclick="ocultarCiudades()">Ocultar ciudades</button>
+
+    <script>
+        function ocultarCiudades() {
+            var elementos = document.getElementsByClassName("ciudad");
+            for (var i = 0; i < elementos.length; i++) {
+                elementos[i].style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
