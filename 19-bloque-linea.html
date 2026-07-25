@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 19 - Bloque y en Linea HTML</title>
+</head>
+<body>
+
+    <h2>Elementos de bloque (block-level)</h2>
+    <p>Cada elemento block empieza en una linea nueva y ocupa todo el ancho disponible:</p>
+    <p style="background-color:lightblue;">Este es un p (block) con fondo celeste.</p>
+    <div style="background-color:lightyellow;">Este es un div (block) con fondo amarillo.</div>
+    <p>Nota como cada uno se puso en su propia linea completa, uno debajo del otro, sin que se lo pidieramos.</p>
+
+    <h2>Elementos en linea (inline)</h2>
+    <p>Un elemento inline NO empieza en una linea nueva, solo ocupa el espacio que necesita:</p>
+    <p>Este es un parrafo con <span style="background-color:lightgreen;">un span en linea</span> en medio del texto, y sigue el texto normal despues sin saltar de linea.</p>
+
+    <h2>El elemento div (contenedor de bloque)</h2>
+    <div style="background-color:black;color:white;padding:20px;">
+        <h2>Chiquimula</h2>
+        <p>Chiquimula es un departamento de Guatemala, conocido como la "Perla de Oriente", sede de la Universidad Mariano Galvez donde estudio Ingenieria en Sistemas.</p>
+    </div>
+
+    <h2>El elemento span (contenedor en linea)</h2>
+    <p>Mi color favorito es el <span style="color:blue;font-weight:bold;">azul</span> y tambien me gusta el <span style="color:darkolivegreen;font-weight:bold;">verde oscuro</span>.</p>
+
+    <h2>Diferencia resumida</h2>
+    <p><b>Block:</b> siempre en linea nueva, ocupa todo el ancho (ej: p, div, h1-h6, ul, li, table).</p>
+    <p><b>Inline:</b> no rompe la linea, solo ocupa lo necesario (ej: span, a, b, img, strong).</p>
+    <p>Un elemento inline NO puede contener un elemento block adentro.</p>
+
+</body>
+</html>
