@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML Forms</h1>
+
+<!-- 1. Text Fields & Label Elements -->
+<h2>Text Fields with Labels</h2>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!-- 2. Radio Buttons -->
+<h2>Radio Buttons (Select ONE)</h2>
+<p>Choose your favorite Web language:</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+<!-- 3. Checkboxes -->
+<h2>Checkboxes (Select ZERO or MORE)</h2>
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+<!-- 4. Clickable Button -->
+<h2>Clickable Button</h2>
+<form>
+  <input type="button" value="Click Me" onclick="alert('Hello World!')">
+</form>
+
+<!-- 5. Input Missing Name Attribute -->
+<h2>Input without Name Attribute (Will not submit)</h2>
+<form action="/action_page.php">
+  <label for="fname_no_name">First name (No name attribute):</label><br>
+  <input type="text" id="fname_no_name" value="John"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>2026 W3Schools</p>
+
+</body>
+</html>
