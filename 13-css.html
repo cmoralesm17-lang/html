@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 13 - HTML CSS</title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+        h1 {
+            color: blue;
+            font-family: verdana;
+            font-size: 200%;
+        }
+        p {
+            color: red;
+            font-family: courier;
+            font-size: 130%;
+        }
+        .caja {
+            border: 2px solid powderblue;
+            padding: 30px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color:darkslateblue;">CSS Inline (estilo dentro del elemento)</h2>
+    <h1 style="color:blue;">Encabezado azul con estilo inline</h1>
+    <p style="color:red;">Parrafo rojo con estilo inline.</p>
+
+    <h2 style="color:darkslateblue;">CSS Interno (dentro de la etiqueta style en el head)</h2>
+    <p>Todos los h1 y p de esta pagina ya cambiaron de color, fuente y tamaño gracias al bloque &lt;style&gt; que esta en el head. El fondo de la pagina tambien cambio a powderblue.</p>
+
+    <h2 style="color:darkslateblue;">Borde, padding y margen (clase .caja)</h2>
+    <p class="caja">Este parrafo tiene borde, padding (espacio interno) y margin (espacio externo) definidos en la clase .caja del CSS interno.</p>
+
+    <h2 style="color:darkslateblue;">CSS Externo (referencia, no aplicado aqui)</h2>
+    <p>Para usar un archivo CSS externo se agrega en el head:</p>
+    <p><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+    <p>Esto conecta la pagina con un archivo aparte (styles.css) que solo contiene reglas CSS, sin HTML. Es la forma mas usada en proyectos reales, porque permite cambiar el diseño de todo un sitio editando un solo archivo.</p>
+
+</body>
+</html>
