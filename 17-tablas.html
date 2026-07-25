@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 17 - Tablas HTML</title>
+    <style>
+        h2 { margin-top: 40px; }
+        .collapse { border-collapse: collapse; }
+        .collapse th, .collapse td { border: 1px solid black; }
+
+        .invisible th, .invisible td {
+            border: 1px solid white;
+            border-collapse: collapse;
+            background-color: #96D4D4;
+        }
+
+        .redondeada th, .redondeada td {
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .punteada th, .punteada td {
+            border-style: dotted;
+        }
+
+        .colorborde th, .colorborde td {
+            border: 1px solid #96D4D4;
+        }
+
+        .padding th, .padding td {
+            padding: 15px;
+            border: 1px solid black;
+        }
+
+        .spacing {
+            border-spacing: 20px;
+        }
+        .spacing th, .spacing td {
+            border: 1px solid black;
+        }
+
+        .izquierda th {
+            text-align: left;
+            border: 1px solid black;
+        }
+        .izquierda td { border: 1px solid black; }
+
+        .cebra-fila tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+        .cebra-fila th, .cebra-fila td {
+            border: 1px solid black;
+        }
+
+        .cebra-columna td:nth-child(even), .cebra-columna th:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+        .cebra-columna th, .cebra-columna td {
+            border: 1px solid black;
+        }
+
+        .divisores tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hover tr:hover {
+            background-color: #D6EEEE;
+        }
+        .hover th, .hover td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 17 - Tablas HTML</h1>
+
+    <h2>1. Tabla basica</h2>
+    <table border="1">
+        <tr>
+            <th>Empresa</th>
+            <th>Contacto</th>
+            <th>Pais</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Alemania</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+
+    <h2>2. Bordes con CSS (border) - dobles por defecto</h2>
+    <table class="collapse" style="border:0;">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+    <p>Nota: sin border-collapse, cada celda tiene su propio borde y se ven "dobles".</p>
+
+    <h2>3. Bordes colapsados (border-collapse: collapse)</h2>
+    <table class="collapse">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+
+    <h2>4. Borde invisible (mismo color que el fondo)</h2>
+    <table class="invisible">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+
+    <h2>5. Bordes redondeados (border-radius)</h2>
+    <table class="redondeada" style="border-collapse:separate; border-spacing:5px;">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+
+    <h2>6. Bordes punteados (border-style)</h2>
+    <table class="punteada" style="border-collapse:separate; border-spacing:5px;">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+
+    <h2>7. Color de borde (border-color)</h2>
+    <table class="colorborde" style="border-collapse:separate; border-spacing:5px;">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+    </table>
+
+    <h2>8. Ancho de tabla y columna (width)</h2>
+    <table style="width:100%; border:1px solid black; border-collapse:collapse;">
+        <tr>
+            <th style="width:70%; border:1px solid black;">Nombre</th>
+            <th style="border:1px solid black;">Apellido</th>
+            <th style="border:1px solid black;">Edad</th>
+        </tr>
+        <tr>
+            <td style="border:1px solid black;">Jill</td>
+            <td style="border:1px solid black;">Smith</td>
+            <td style="border:1px solid black;">50</td>
+        </tr>
+    </table>
+
+    <h2>9. Altura de fila (height)</h2>
+    <table style="width:100%; border:1px solid black; border-collapse:collapse;">
+        <tr>
+            <th style="border:1px solid black;">Nombre</th>
+            <th style="border:1px solid black;">Apellido</th>
+        </tr>
+        <tr style="height:120px;">
+            <td style="border:1px solid black;">Jill</td>
+            <td style="border:1px solid black;">Smith</td>
+        </tr>
+    </table>
+
+    <h2>10. Encabezados verticales (th en la primera columna)</h2>
+    <table class="collapse">
+        <tr><th>Nombre</th><td>Jill</td><td>Eve</td></tr>
+        <tr><th>Apellido</th><td>Smith</td><td>Jackson</td></tr>
+        <tr><th>Edad</th><td>50</td><td>94</td></tr>
+    </table>
+
+    <h2>11. Encabezados alineados a la izquierda</h2>
+    <table class="izquierda">
+        <tr><th>Nombre</th><th>Apellido</th><th>Edad</th></tr>
+        <tr><td>Jill</td><td>Smith</td><td>50</td></tr>
+    </table>
+
+    <h2>12. Encabezado que abarca varias columnas (colspan)</h2>
+    <table class="collapse">
+        <tr>
+            <th colspan="2">Nombre completo</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+    </table>
+
+    <h2>13. Celda que abarca varias filas (rowspan)</h2>
+    <table class="collapse">
+        <tr>
+            <th>Nombre</th>
+            <td>Jill</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefono</th>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+
+    <h2>14. Titulo de tabla (caption)</h2>
+    <table class="collapse" style="width:100%;">
+        <caption>Ahorros mensuales</caption>
+        <tr><th>Mes</th><th>Ahorro</th></tr>
+        <tr><td>Enero</td><td>Q100</td></tr>
+        <tr><td>Febrero</td><td>Q50</td></tr>
+    </table>
+
+    <h2>15. Padding dentro de celdas</h2>
+    <table class="padding">
+        <tr><th>A</th><th>B</th></tr>
+        <tr><td>hola</td><td>hola</td></tr>
+    </table>
+
+    <h2>16. Espaciado entre celdas (border-spacing)</h2>
+    <table class="spacing">
+        <tr><th>A</th><th>B</th></tr>
+        <tr><td>hola</td><td>hola</td></tr>
+    </table>
+
+    <h2>17. Rayas de cebra por fila</h2>
+    <table class="cebra-fila" style="width:100%;">
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+        <tr><td>10</td><td>11</td><td>12</td></tr>
+    </table>
+
+    <h2>18. Rayas de cebra por columna</h2>
+    <table class="cebra-columna" style="width:100%;">
+        <tr><th>1</th><th>2</th><th>3</th></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+    </table>
+
+    <h2>19. Divisores horizontales (border-bottom en tr)</h2>
+    <table class="divisores" style="width:100%; border-collapse:collapse;">
+        <tr><th>Nombre</th><th>Apellido</th><th>Ahorro</th></tr>
+        <tr><td>Pedro</td><td>Ramirez</td><td>Q100</td></tr>
+        <tr><td>Lucia</td><td>Gomez</td><td>Q150</td></tr>
+    </table>
+
+    <h2>20. Tabla con efecto hover (resalta fila al pasar el mouse)</h2>
+    <table class="hover" style="width:100%;">
+        <tr><th>Nombre</th><th>Apellido</th><th>Ahorro</th></tr>
+        <tr><td>Pedro</td><td>Ramirez</td><td>Q100</td></tr>
+        <tr><td>Lucia</td><td>Gomez</td><td>Q150</td></tr>
+    </table>
+
+    <h2>21. Colgroup (estilo por columnas completas)</h2>
+    <table class="collapse" style="width:100%;">
+        <colgroup>
+            <col span="2" style="background-color:#D6EEEE">
+            <col span="5" style="background-color:pink">
+        </colgroup>
+        <tr>
+            <th>LUN</th><th>MAR</th><th>MIE</th><th>JUE</th><th>VIE</th><th>SAB</th><th>DOM</th>
+        </tr>
+        <tr>
+            <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+        </tr>
+    </table>
+
+</body>
+</html>
