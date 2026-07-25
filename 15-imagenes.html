@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 15 - Imagenes HTML</title>
+    <style>
+        .fondo-parrafo {
+            background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Imagen basica (src y alt)</h2>
+    <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flores en Chania">
+    <p>El atributo <b>src</b> indica la ruta de la imagen, y <b>alt</b> es el texto alternativo que se muestra si la imagen no carga (o lo lee un lector de pantalla).</p>
+
+    <h2>Tamaño con width y height</h2>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" width="200" height="240">
+
+    <h2>Tamaño con style (recomendado)</h2>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Chica con chaqueta" style="width:200px;height:240px;">
+
+    <h2>Imagen en otro servidor (URL absoluta)</h2>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+    <h2>Imagen como enlace</h2>
+    <a href="01-introduccion.html">
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Ir a introduccion" style="width:60px;height:72px;">
+    </a>
+
+    <h2>Imagen flotante (float)</h2>
+    <p>
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Cara sonriente" style="float:right;width:80px;height:96px;">
+        Este texto rodea a la imagen porque tiene float:right aplicado. El texto continua fluyendo alrededor del espacio que deja la imagen flotante, tal como sucede en revistas y periodicos digitales.
+    </p>
+    <div style="clear:both;"></div>
+
+    <h2>Mapa de imagen (Image Map)</h2>
+    <p>Haz clic en distintas zonas de la imagen (definidas con coordenadas rectangulares y circulares):</p>
+    <img src="https://www.w3schools.com/html/img_workplace.jpg" alt="Lugar de trabajo" usemap="#workmap" style="width:400px;">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computadora" href="https://www.w3schools.com/html/">
+        <area shape="rect" coords="290,172,333,250" alt="Telefono" href="https://www.w3schools.com/html/">
+        <area shape="circle" coords="337,300,44" alt="Cafe" href="https://www.w3schools.com/html/">
+    </map>
+
+    <h2>Imagen de fondo en un parrafo</h2>
+    <p class="fondo-parrafo">Este parrafo tiene una imagen de fondo aplicada con CSS (background-image), ademas de background-size:cover para que la imagen cubra todo el espacio sin deformarse.</p>
+
+    <h2>Elemento picture (imagenes segun el dispositivo)</h2>
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen por defecto" style="width:300px;">
+    </picture>
+    <p>El navegador elige cual imagen mostrar segun el ancho de la pantalla. La etiqueta &lt;img&gt; al final es obligatoria, es la que se usa si el navegador no soporta &lt;picture&gt; o ninguna condicion coincide.</p>
+
+</body>
+</html>
