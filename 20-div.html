@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 20 - Div HTML</title>
+    <style>
+        h2 { margin-top: 40px; }
+
+        .contenedor-centrado {
+            width: 300px;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        .float-container {
+            width: 100%;
+            overflow: auto;
+        }
+        .float-container div {
+            width: 33%;
+            float: left;
+            box-sizing: border-box;
+            border: 1px solid gray;
+        }
+
+        .inline-block-div {
+            width: 30%;
+            display: inline-block;
+            border: 1px solid gray;
+            vertical-align: top;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+        .flex-container > div {
+            width: 33%;
+            border: 1px solid gray;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+        .grid-container div {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 20 - Div HTML</h1>
+
+    <h2>1. Div basico (ocupa todo el ancho)</h2>
+    <p>Lorem Ipsum <div style="background-color:lightyellow;">Yo soy un div</div> dolor sit amet.</p>
+    <p>Nota como el div rompe la linea antes y despues, aunque este en medio de una oracion.</p>
+
+    <h2>2. Div como contenedor</h2>
+    <div style="border:1px solid black; padding:10px;">
+        <h3>Londres</h3>
+        <p>Londres es la capital de Inglaterra.</p>
+    </div>
+
+    <h2>3. Div centrado (margin:auto)</h2>
+    <div class="contenedor-centrado">
+        <h3>Londres</h3>
+        <p>Londres es la capital de Inglaterra. Este div tiene ancho fijo de 300px y esta centrado con margin:auto.</p>
+    </div>
+
+    <h2>4. Varios divs (uno debajo del otro por defecto)</h2>
+    <div style="border:1px solid black; padding:10px; margin-bottom:10px;">
+        <h3>Londres</h3>
+        <p>Capital de Inglaterra.</p>
+    </div>
+    <div style="border:1px solid black; padding:10px; margin-bottom:10px;">
+        <h3>Oslo</h3>
+        <p>Capital de Noruega.</p>
+    </div>
+    <div style="border:1px solid black; padding:10px;">
+        <h3>Roma</h3>
+        <p>Capital de Italia.</p>
+    </div>
+
+    <h2>5. Divs lado a lado con float</h2>
+    <div class="float-container">
+        <div>
+            <h3>Londres</h3>
+            <p>Capital de Inglaterra.</p>
+        </div>
+        <div>
+            <h3>Oslo</h3>
+            <p>Capital de Noruega.</p>
+        </div>
+        <div>
+            <h3>Roma</h3>
+            <p>Capital de Italia.</p>
+        </div>
+    </div>
+
+    <h2>6. Divs lado a lado con inline-block</h2>
+    <div class="inline-block-div">
+        <h3>Londres</h3>
+        <p>Capital de Inglaterra.</p>
+    </div>
+    <div class="inline-block-div">
+        <h3>Oslo</h3>
+        <p>Capital de Noruega.</p>
+    </div>
+    <div class="inline-block-div">
+        <h3>Roma</h3>
+        <p>Capital de Italia.</p>
+    </div>
+
+    <h2>7. Divs lado a lado con flex</h2>
+    <div class="flex-container">
+        <div>
+            <h3>Londres</h3>
+            <p>Capital de Inglaterra.</p>
+        </div>
+        <div>
+            <h3>Oslo</h3>
+            <p>Capital de Noruega.</p>
+        </div>
+        <div>
+            <h3>Roma</h3>
+            <p>Capital de Italia.</p>
+        </div>
+    </div>
+
+    <h2>8. Divs lado a lado con grid</h2>
+    <div class="grid-container">
+        <div>
+            <h3>Londres</h3>
+            <p>Capital de Inglaterra.</p>
+        </div>
+        <div>
+            <h3>Oslo</h3>
+            <p>Capital de Noruega.</p>
+        </div>
+        <div>
+            <h3>Roma</h3>
+            <p>Capital de Italia.</p>
+        </div>
+    </div>
+
+</body>
+</html>
