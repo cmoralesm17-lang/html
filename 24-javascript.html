@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 24 - JavaScript HTML</title>
+</head>
+<body>
+
+    <h2>Mi primer JavaScript</h2>
+    <p id="demo">Este texto va a cambiar.</p>
+    <button onclick="document.getElementById('demo').innerHTML = Date()">
+        Clic para mostrar fecha y hora
+    </button>
+
+    <h2>JavaScript puede cambiar contenido</h2>
+    <p id="contenido">Texto original.</p>
+    <button onclick="document.getElementById('contenido').innerHTML = 'Hola JavaScript!'">
+        Cambiar contenido
+    </button>
+
+    <h2>JavaScript puede cambiar estilos</h2>
+    <p id="estilo">Este texto va a cambiar de estilo.</p>
+    <button onclick="cambiarEstilo()">Cambiar estilo</button>
+    <script>
+        function cambiarEstilo() {
+            document.getElementById("estilo").style.fontSize = "25px";
+            document.getElementById("estilo").style.color = "red";
+            document.getElementById("estilo").style.backgroundColor = "yellow";
+        }
+    </script>
+
+    <h2>JavaScript puede cambiar atributos</h2>
+    <img id="imagen" src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen inicial" style="width:150px;">
+    <br>
+    <button onclick="document.getElementById('imagen').src = 'https://www.w3schools.com/html/img_chania.jpg'">
+        Cambiar imagen
+    </button>
+
+    <h2>Etiqueta noscript</h2>
+    <script>
+        document.getElementById("demo").innerHTML = "Hola JavaScript! (esto lo escribio el script)";
+    </script>
+    <noscript>Lo sentimos, tu navegador no soporta JavaScript!</noscript>
+    <p>El texto de arriba (bajo "Mi primer JavaScript") fue modificado automaticamente por un script al cargar la pagina.</p>
+
+</body>
+</html>
