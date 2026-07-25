@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 28 - Responsive HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h2 { margin-top: 40px; }
+
+        .left, .right {
+            float: left;
+            width: 20%;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .main {
+            float: left;
+            width: 60%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .contenedor-media::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 800px) {
+            .left, .main, .right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 28 - Responsive HTML</h1>
+
+    <h2>1. Meta viewport (obligatorio para que sea responsive)</h2>
+    <p>Este archivo ya incluye en el head:</p>
+    <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+    <p>Sin esta linea, los celulares mostrarian la pagina como si fuera de escritorio (todo pequeño y con zoom).</p>
+
+    <h2>2. Imagen responsive con width:100%</h2>
+    <p>Se escala hacia arriba o abajo segun el ancho de la pantalla (puede verse mas grande que su tamaño original):</p>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" style="width:100%;max-width:500px;" alt="Chica con chaqueta">
+
+    <h2>3. Imagen responsive con max-width:100%</h2>
+    <p>Se reduce si hace falta, pero nunca se agranda mas alla de su tamaño original (mejor practica que width:100%):</p>
+    <img src="https://www.w3schools.com/html/img_girl.jpg" style="max-width:100%;height:auto;width:500px;" alt="Chica con chaqueta">
+
+    <h2>4. Diferentes imagenes segun el ancho del navegador</h2>
+    <picture>
+        <source srcset="https://www.w3schools.com/html/img_girl.jpg" media="(max-width: 600px)">
+        <source srcset="https://www.w3schools.com/html/img_chania.jpg" media="(max-width: 1500px)">
+        <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flores" style="width:100%;max-width:400px;">
+    </picture>
+    <p>Redimensiona la ventana del navegador para ver como cambia la imagen segun el ancho.</p>
+
+    <h2>5. Texto con tamaño responsive (unidad vw)</h2>
+    <h1 style="font-size:10vw;">Hola Mundo</h1>
+    <p>1vw equivale al 1% del ancho de la ventana (viewport). Redimensiona la ventana y el texto cambiara de tamaño automaticamente.</p>
+
+    <h2>6. Media queries (columnas que se apilan en pantallas pequeñas)</h2>
+    <div class="contenedor-media">
+        <div class="left">
+            <h3>Menu Izquierdo</h3>
+            <p>Enlace 1</p>
+            <p>Enlace 2</p>
+        </div>
+        <div class="main">
+            <h3>Contenido Principal</h3>
+            <p>En pantallas grandes, estas tres columnas se ven una al lado de la otra. Si la ventana del navegador se reduce a 800px o menos, la media query hace que cada una ocupe el 100% del ancho y se apilen verticalmente.</p>
+        </div>
+        <div class="right">
+            <h3>Menu Derecho</h3>
+            <p>Enlace 3</p>
+            <p>Enlace 4</p>
+        </div>
+    </div>
+
+    <h2 style="clear:both;">7. Frameworks CSS (referencia, no aplicado aqui)</h2>
+    <p>Frameworks como <b>W3.CSS</b> o <b>Bootstrap</b> ya traen sistemas de columnas responsive listos para usar, sin tener que escribir las media queries a mano. Se agregan enlazando su hoja de estilos:</p>
+    <pre>&lt;link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;</pre>
+    <p>No los aplique en este archivo de practica para mantenerlo enfocado en HTML/CSS puro, pero es bueno saber que existen para proyectos mas grandes.</p>
+
+</body>
+</html>
