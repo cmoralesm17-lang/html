@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 12 - Colores HTML</title>
+</head>
+<body>
+
+    <h2>Colores por nombre</h2>
+    <p style="background-color:Tomato;">Tomato</p>
+    <p style="background-color:Orange;">Orange</p>
+    <p style="background-color:DodgerBlue;">DodgerBlue</p>
+    <p style="background-color:MediumSeaGreen;">MediumSeaGreen</p>
+    <p style="background-color:SlateBlue;">SlateBlue</p>
+
+    <h2>Color de fondo</h2>
+    <h1 style="background-color:DodgerBlue;">Hola Mundo</h1>
+    <p style="background-color:Tomato;">Este parrafo tiene fondo color Tomato.</p>
+
+    <h2>Color de texto</h2>
+    <h1 style="color:Tomato;">Hola Mundo</h1>
+    <p style="color:DodgerBlue;">Este texto es color DodgerBlue.</p>
+    <p style="color:MediumSeaGreen;">Este texto es color MediumSeaGreen.</p>
+
+    <h2>Color de borde</h2>
+    <h1 style="border:2px solid Tomato;">Hola Mundo</h1>
+    <h1 style="border:2px solid DodgerBlue;">Hola Mundo</h1>
+    <h1 style="border:2px solid Violet;">Hola Mundo</h1>
+
+    <h2>Valores RGB</h2>
+    <p>Formula: rgb(rojo, verde, azul) - cada uno entre 0 y 255</p>
+    <h1 style="background-color:rgb(255, 0, 0);">Rojo puro rgb(255, 0, 0)</h1>
+    <h1 style="background-color:rgb(0, 255, 0);">Verde puro rgb(0, 255, 0)</h1>
+    <h1 style="background-color:rgb(0, 0, 0); color:white;">Negro rgb(0, 0, 0)</h1>
+    <h1 style="background-color:rgb(255, 255, 255); border:1px solid black;">Blanco rgb(255, 255, 255)</h1>
+
+    <h3>Tonos de gris con RGB</h3>
+    <h1 style="background-color:rgb(60, 60, 60); color:white;">rgb(60, 60, 60)</h1>
+    <h1 style="background-color:rgb(140, 140, 140);">rgb(140, 140, 140)</h1>
+    <h1 style="background-color:rgb(220, 220, 220);">rgb(220, 220, 220)</h1>
+
+    <h2>Valores RGBA (con transparencia)</h2>
+    <p>Formula: rgba(rojo, verde, azul, alpha) - alpha entre 0.0 (invisible) y 1.0 (opaco)</p>
+    <h1 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+
+    <h2>Valores HEX</h2>
+    <p>Formula: #rrggbb - valores hexadecimales de 00 a ff</p>
+    <h1 style="background-color:#ff0000;">Rojo #ff0000</h1>
+    <h1 style="background-color:#00ff00;">Verde #00ff00</h1>
+    <h1 style="background-color:#000000; color:white;">Negro #000000</h1>
+    <h1 style="background-color:#ffffff; border:1px solid black;">Blanco #ffffff</h1>
+
+    <h3>Tonos de gris con HEX</h3>
+    <h1 style="background-color:#404040; color:white;">#404040</h1>
+    <h1 style="background-color:#a0a0a0;">#a0a0a0</h1>
+    <h1 style="background-color:#dcdcdc;">#dcdcdc</h1>
+
+    <h2>Valores HSL</h2>
+    <p>Formula: hsl(matiz, saturacion, luminosidad) - matiz 0-360, saturacion y luminosidad en %</p>
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%) - Rojo</h1>
+    <h1 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%) - Azul</h1>
+    <h1 style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%) - Verde</h1>
+
+    <h3>Efecto de la saturacion (0% a 100%)</h3>
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%) - sin saturacion, es gris</h1>
+
+    <h3>Efecto de la luminosidad (0% a 100%)</h3>
+    <h1 style="background-color:hsl(0, 100%, 0%); color:white;">hsl(0, 100%, 0%) - negro</h1>
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%) - color normal</h1>
+    <h1 style="background-color:hsl(0, 100%, 100%); border:1px solid black;">hsl(0, 100%, 100%) - blanco</h1>
+
+    <h3>Tonos de gris con HSL</h3>
+    <h1 style="background-color:hsl(0, 0%, 20%); color:white;">hsl(0, 0%, 20%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 90%);">hsl(0, 0%, 90%)</h1>
+
+    <h2>Valores HSLA (con transparencia)</h2>
+    <p>Formula: hsla(matiz, saturacion, luminosidad, alpha)</p>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h1>
+
+</body>
+</html>
