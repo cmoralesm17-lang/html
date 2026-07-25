@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 27 - Diseno HTML (Layout)</title>
+    <style>
+        header, footer {
+            background-color: #333333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #DDDDDD;
+            padding: 10px;
+        }
+        nav a {
+            margin-right: 15px;
+        }
+
+        .layout-flex {
+            display: flex;
+        }
+        aside {
+            background-color: #f1f1f1;
+            padding: 15px;
+            width: 25%;
+        }
+        article {
+            padding: 15px;
+            width: 75%;
+        }
+
+        .layout-float .aside-float {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+        .layout-float .articulo-float {
+            float: left;
+            width: 75%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+        .layout-float::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 25% 75%;
+        }
+        .layout-grid > div {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 27 - Diseno HTML (Layout)</h1>
+
+    <h2>Elementos semanticos de HTML5</h2>
+    <p>Estos elementos describen el significado de cada seccion de la pagina (no solo su apariencia). Aqui un layout completo usando: header, nav, section, article, aside, footer:</p>
+
+    <header>
+        <h2>Mi Sitio Web</h2>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#ciudades">Ciudades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="layout-flex">
+        <aside>
+            <h3>Ciudades</h3>
+            <p>Londres</p>
+            <p>Paris</p>
+            <p>Tokio</p>
+        </aside>
+
+        <article>
+            <section>
+                <h3>Londres</h3>
+                <p>Londres es la capital de Inglaterra. Es la ciudad mas poblada del Reino Unido, con un area metropolitana de mas de 13 millones de habitantes.</p>
+                <p>Situada sobre el rio Tamesis, Londres ha sido un asentamiento importante desde hace dos milenios, con su historia remontandose a su fundacion por los romanos, quienes la llamaron Londinium.</p>
+            </section>
+        </article>
+    </div>
+
+    <footer>
+        <p>Pie de pagina - Leccion 27</p>
+    </footer>
+
+    <h2>details y summary (contenido desplegable)</h2>
+    <details>
+        <summary>Haz clic para ver mas informacion</summary>
+        <p>Este contenido estaba oculto y aparece al hacer clic en el resumen de arriba. Es util para preguntas frecuentes o informacion adicional opcional.</p>
+    </details>
+
+    <h2>Tecnica de layout con Float</h2>
+    <div class="layout-float">
+        <div class="aside-float">
+            <h3>Menu</h3>
+            <p>Enlace 1</p>
+            <p>Enlace 2</p>
+        </div>
+        <div class="articulo-float">
+            <h3>Contenido principal</h3>
+            <p>Este layout usa float:left en ambas columnas, y un truco de "clearfix" (::after con clear:both) para que el contenedor padre no colapse.</p>
+        </div>
+    </div>
+
+    <h2>Tecnica de layout con Grid</h2>
+    <div class="layout-grid">
+        <div style="background-color:#f1f1f1;">
+            <h3>Menu</h3>
+            <p>Enlace 1</p>
+            <p>Enlace 2</p>
+        </div>
+        <div>
+            <h3>Contenido principal</h3>
+            <p>Con grid-template-columns definimos directamente el ancho de cada columna, sin necesidad de float ni flex.</p>
+        </div>
+    </div>
+
+</body>
+</html>
