@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 26 - El elemento Head HTML</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Practica de la leccion Head del curso de Desarrollo Web 036">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Desarrollo Web">
+    <meta name="author" content="Christian Morales">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: arial; }
+        .caja-codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 26 - El elemento Head HTML</h1>
+    <p>Todo lo que aprendimos en esta leccion vive DENTRO de la etiqueta &lt;head&gt; de este mismo archivo (mira las lineas de arriba, entre &lt;head&gt; y &lt;/head&gt;). Nada de eso se ve directamente en la pagina, pero cada elemento cumple una funcion importante.</p>
+
+    <h2>title (obligatorio)</h2>
+    <p>Mira la pestaña de tu navegador: dice "Leccion 26 - El elemento Head HTML", tomado directo del &lt;title&gt; de este archivo.</p>
+
+    <h2>style</h2>
+    <p>El bloque &lt;style&gt; en el head ya esta aplicando la fuente Arial a toda esta pagina, y el fondo gris de este texto:</p>
+    <p class="caja-codigo">Este parrafo tiene la clase "caja-codigo", definida en el &lt;style&gt; del head.</p>
+
+    <h2>link (referencia externa, ejemplo)</h2>
+    <p>Para conectar una hoja de estilos externa se usaria:</p>
+    <div class="caja-codigo">&lt;link rel="stylesheet" href="mystyle.css"&gt;</div>
+
+    <h2>meta (metadatos)</h2>
+    <p>Este archivo ya incluye varios metadatos en el head, que no se ven en pantalla pero los usan navegadores y buscadores:</p>
+    <ul>
+        <li><b>charset:</b> define la codificacion de caracteres (UTF-8, para que tildes y ñ se vean bien)</li>
+        <li><b>description:</b> descripcion de la pagina para buscadores</li>
+        <li><b>keywords:</b> palabras clave relacionadas con el contenido</li>
+        <li><b>author:</b> autor del documento</li>
+        <li><b>viewport:</b> controla como se ve la pagina en dispositivos moviles</li>
+    </ul>
+
+    <h2>viewport (detalle importante)</h2>
+    <p>La linea <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> es esencial para que la pagina se vea bien en celulares y tablets, no solo en computadora. Se recomienda incluirla siempre.</p>
+
+    <h2>script</h2>
+    <p>El &lt;script&gt; tambien puede vivir en el head (ademas de en el body, como vimos en la leccion anterior):</p>
+    <button onclick="miFuncion()">Probar funcion desde el head</button>
+    <p id="demo"></p>
+    <script>
+        function miFuncion() {
+            document.getElementById("demo").innerHTML = "Hola JavaScript, definido en el head!";
+        }
+    </script>
+
+    <h2>base (ejemplo, no aplicado aqui)</h2>
+    <p>Define una URL base por defecto para todos los enlaces relativos de la pagina. Ejemplo de como se veria en el head:</p>
+    <div class="caja-codigo">&lt;base href="https://www.w3schools.com/" target="_blank"&gt;</div>
+    <p>No lo active en este archivo porque solo puede haber UN &lt;base&gt; por documento, y afectaria todos los demas enlaces de esta pagina de practica.</p>
+
+</body>
+</html>
