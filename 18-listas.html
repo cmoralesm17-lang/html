@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 18 - Listas HTML</title>
+    <style>
+        h2 { margin-top: 40px; }
+        .menu-horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        .menu-horizontal li {
+            float: left;
+        }
+        .menu-horizontal li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .menu-horizontal li a:hover {
+            background-color: #111111;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Leccion 18 - Listas HTML</h1>
+
+    <h2>1. Lista desordenada (ul)</h2>
+    <ul>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>2. Lista ordenada (ol)</h2>
+    <ol>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>3. Lista de descripcion (dl, dt, dd)</h2>
+    <dl>
+        <dt>Cafe</dt>
+        <dd>- bebida caliente y negra</dd>
+        <dt>Leche</dt>
+        <dd>- bebida fria y blanca</dd>
+    </dl>
+
+    <h2>4. Marcador tipo disc (por defecto)</h2>
+    <ul style="list-style-type:disc;">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>5. Marcador tipo circle</h2>
+    <ul style="list-style-type:circle;">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>6. Marcador tipo square</h2>
+    <ul style="list-style-type:square;">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>7. Sin marcador (none)</h2>
+    <ul style="list-style-type:none;">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>8. Lista anidada (lista dentro de lista)</h2>
+    <ul>
+        <li>Cafe</li>
+        <li>Te
+            <ul>
+                <li>Te negro</li>
+                <li>Te verde</li>
+            </ul>
+        </li>
+        <li>Leche</li>
+    </ul>
+
+    <h2>9. Lista horizontal con CSS (menu de navegacion)</h2>
+    <ul class="menu-horizontal">
+        <li><a href="01-introduccion.html">Inicio</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+    </ul>
+
+    <h2>10. Lista ordenada con numeros (type="1")</h2>
+    <ol type="1">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>11. Lista ordenada con letras mayusculas (type="A")</h2>
+    <ol type="A">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>12. Lista ordenada con letras minusculas (type="a")</h2>
+    <ol type="a">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>13. Lista ordenada con numeros romanos mayusculas (type="I")</h2>
+    <ol type="I">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>14. Lista ordenada con numeros romanos minusculas (type="i")</h2>
+    <ol type="i">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>15. Lista ordenada empezando desde un numero especifico (start)</h2>
+    <ol start="50">
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Leche</li>
+    </ol>
+
+    <h2>16. Lista ordenada anidada</h2>
+    <ol>
+        <li>Cafe</li>
+        <li>Te
+            <ol>
+                <li>Te negro</li>
+                <li>Te verde</li>
+            </ol>
+        </li>
+        <li>Leche</li>
+    </ol>
+
+</body>
+</html>
