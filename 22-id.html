@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 22 - ID HTML</title>
+    <style>
+        #miEncabezado {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .ciudad {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="miEncabezado">Mi Encabezado</h1>
+
+    <h2>Diferencia entre class e id</h2>
+    <p>El id (miEncabezado) solo lo puede tener UN elemento en toda la pagina. La clase (ciudad) la pueden compartir varios:</p>
+
+    <h1 id="miEncabezado">Mis Ciudades</h1>
+
+    <h2 class="ciudad">Londres</h2>
+    <p>Londres es la capital de Inglaterra.</p>
+
+    <h2 class="ciudad">Paris</h2>
+    <p>Paris es la capital de Francia.</p>
+
+    <h2 class="ciudad">Tokio</h2>
+    <p>Tokio es la capital de Japon.</p>
+
+    <h2>Marcadores (bookmarks) con id</h2>
+    <p><a href="#capitulo4">Saltar al Capitulo 4</a></p>
+
+    <p style="height:300px;">Espacio de relleno para simular una pagina larga y que se note el salto...</p>
+
+    <h2 id="capitulo4">Capitulo 4</h2>
+    <p>Aqui llega el enlace de arriba, gracias al atributo id="capitulo4" en este encabezado.</p>
+
+    <h2>Uso de id con JavaScript</h2>
+    <p>Al hacer clic en el boton, se cambia el texto del encabezado con id "miEncabezado":</p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+    <script>
+        function cambiarTexto() {
+            document.getElementById("miEncabezado").innerHTML = "Que tengas un buen dia!";
+        }
+    </script>
+
+</body>
+</html>
