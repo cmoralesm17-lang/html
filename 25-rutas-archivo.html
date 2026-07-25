@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leccion 25 - Rutas de Archivo HTML</title>
+</head>
+<body>
+
+    <h1>Leccion 25 - Rutas de Archivo (File Paths)</h1>
+
+    <h2>Ruta absoluta</h2>
+    <p>Apunta a la URL completa de un archivo, sin importar en donde este alojada tu propia pagina:</p>
+    <img src="https://www.w3schools.com/images/picture.jpg" alt="Montaña" style="width:200px;">
+    <pre>&lt;img src="https://www.w3schools.com/images/picture.jpg" alt="Montaña"&gt;</pre>
+
+    <h2>Ruta relativa: mismo nivel</h2>
+    <p>El archivo esta en la misma carpeta que la pagina actual:</p>
+    <pre>&lt;img src="picture.jpg"&gt;</pre>
+    <p>En mi caso, un ejemplo real seria enlazar a otro archivo de este mismo repositorio:</p>
+    <a href="24-javascript.html">Ir a leccion de JavaScript (mismo nivel)</a>
+
+    <h2>Ruta relativa: carpeta dentro de la actual</h2>
+    <p>El archivo esta dentro de una subcarpeta llamada "images", ubicada en la carpeta actual:</p>
+    <pre>&lt;img src="images/picture.jpg"&gt;</pre>
+
+    <h2>Ruta relativa: desde la raiz del sitio</h2>
+    <p>El slash inicial (/) indica que se busca desde la raiz del sitio web, no desde la carpeta actual:</p>
+    <pre>&lt;img src="/images/picture.jpg"&gt;</pre>
+
+    <h2>Ruta relativa: una carpeta hacia arriba</h2>
+    <p>Los dos puntos (..) significan "subir un nivel" en la estructura de carpetas:</p>
+    <pre>&lt;img src="../picture.jpg"&gt;</pre>
+    <p>Se pueden combinar: <code>../images/picture.jpg</code> significa "sube un nivel y entra a la carpeta images".</p>
+
+    <h2>Buena practica</h2>
+    <p>Se recomienda usar rutas <b>relativas</b> siempre que sea posible. Asi tu sitio funciona igual en tu computadora (localhost), en tu dominio actual, y en cualquier dominio futuro, sin tener que cambiar cada ruta manualmente.</p>
+
+</body>
+</html>
