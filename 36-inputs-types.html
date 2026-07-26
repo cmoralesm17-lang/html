@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<body>
+
+<h1>HTML Input Types</h1>
+
+<!-- 1. Text & Password Fields -->
+<h2>Text and Password</h2>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+</form>
+
+<!-- 2. Action Buttons (Submit, Reset, Generic) -->
+<h2>Buttons (Submit, Reset, Button)</h2>
+<form action="/action_page.php">
+  <label for="fname_b">First name:</label><br>
+  <input type="text" id="fname_b" name="fname" value="John"><br>
+  <label for="lname_b">Last name:</label><br>
+  <input type="text" id="lname_b" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit"> <!-- Default text submit -->
+  <input type="reset" value="Reset">
+  <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+</form>
+
+<!-- 3. Selection Controls (Radio & Checkbox) -->
+<h2>Radio and Checkbox</h2>
+<p>Choose your favorite Web language:</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+<br>
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+<!-- 4. Advanced & Functional Inputs -->
+<h2>Color, Slider, Search, and Hidden</h2>
+<form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor"><br><br>
+  
+  <label for="vol">Volume (between 0 and 50):</label>
+  <input type="range" id="vol" name="vol" min="0" max="50"><br><br>
+  
+  <label for="gsearch">Search Google:</label>
+  <input type="search" id="gsearch" name="gsearch"><br><br>
+  
+  <input type="hidden" id="custId" name="custId" value="3487">
+</form>
+
+<!-- 5. Validation Inputs (Email, Tel, Url) -->
+<h2>Validated Fields (Email, Tel, URL)</h2>
+<form>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label for="phone">Enter your phone number (Format: 123-45-678):</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+  
+  <label for="homepage">Add your homepage:</label>
+  <input type="url" id="homepage" name="homepage">
+</form>
+
+<!-- 6. Date & Time Inputs -->
+<h2>Date and Time</h2>
+<form>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+  
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  
+  <label for="birthdaytime">Birthday (date and time):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br><br>
+  
+  <label for="bdaymonth">Birthday (month and year):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth"><br><br>
+  
+  <label for="week">Select a week:</label>
+  <input type="week" id="week" name="week"><br><br>
+  
+  <label for="appt">Select a time:</label>
+  <input type="time" id="appt" name="appt">
+</form>
+
+<!-- 7. Media and Files -->
+<h2>File and Image Submission</h2>
+<form>
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  
+  <p>Image Submit Button:</p>
+  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+
+<!-- 8. Number and Numeric Restrictions -->
+<h2>Numeric Restrictions</h2>
+<form>
+  <label for="quantity1">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity1" name="quantity" min="1" max="5"><br><br>
+  
+  <label for="quantity2">Quantity (0 to 100, steps of 10):</label>
+  <input type="number" id="quantity2" name="quantity" min="0" max="100" step="10" value="30">
+</form>
+
+<p>2026 W3Schools</p>
+
+</body>
+</html>
